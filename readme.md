@@ -1,19 +1,36 @@
-### cài node js và angular cho linux
-1. Cài NVM
-```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash```
 
-    Reload shell:
-    ```source ~/.bashrc```
-2. Cài Node LTS
-   
-    ```nvm install --lts```
-    
-    ```nvm use --lts```
+## Cài Node.js và Angular cho Linux
 
-# Cài Angular CLI
+### 1. Cài NVM
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+````
 
-     ```npm install -g @angular/cli```
-     
-  kiểm tra: 
-    
-    ```ng version```
+Reload shell:
+
+```bash
+source ~/.bashrc
+```
+
+---
+
+### 2. Cài Node.js (LTS)
+
+```bash
+nvm install --lts
+nvm use --lts
+```
+
+---
+
+### 3. Cài Angular CLI
+
+```bash
+npm install -g @angular/cli
+```
+
+Kiểm tra:
+
+```bash
+ng version
+```
