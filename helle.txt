@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML, CSS and JavaScript demo</title>
+</head>
+
+<style>
+
+body{
+    top:0;
+    right:0;
+    left:0;
+
+}
+
+form{
+    width: 50%;
+    border: none;
+    box-shadow:  0 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 30%;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30%;
+}
+h4{
+    text-align: left;
+    color: gray;
+    margin-bottom: 5px;
+
+}
+form input{
+    width: 100%;
+    border: none;
+    border-bottom: solid 2px lightblue;
+    padding: 2px;
+
+}
+form button{
+    margin-top: 50%;
+    background: linear-gradient(90deg, #d633ff 0%, #8f3bff 40%, #2ec5ff 100%);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 10%;
+    color: white;
+   
+}
+
+</style>
+
+
+
+
+<body>
+
+
+
+<form>
+<h2>Đăng nhập</h2>
+
+<h4>Tên người dùng</h4>
+<input type="text" name="usename">
+
+
+<h4>Mật khẩu</h4>
+<input type="password" name="password">
+<button> Đăng nhập </button>
+
+
+</form>
+
+
+
+
+
+
+
+<!-- End your code here -->
+</body>
+</html>

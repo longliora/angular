@@ -1,0 +1,53 @@
+<form #stockForm="ngForm">
+
+  <h1>Create Stock</h1>
+
+  <h3>The following element changes from green to red when it is invalid</h3>
+<input type="text" name="name" required  placeholder="Stock Name" [(ngModel)]="stock.name" #name="ngModel" [ngClass]="{
+'green': name.valid,
+'red': name.invalid && name.touched
+}" />
+
+  <h3>The following element changes from green to red when it has been modified</h3>
+  <input type="text" name="code" placeholder="Stock Code" [(ngModel)]="stock.code" #code="ngModel" [ngClass]="{
+    'green': code.pristine,
+    'red': code.dirty
+  }" />
+
+  <h3>The following element changes from green to red when it is visited by the user, regardless of change</h3>
+  <input type="number" name="price" [(ngModel)]="stock.price" #price="ngModel" [ngClass]="{
+    'green': price.untouched,
+    'red': price.touched
+  }" />
+<br>
+
+  <select name="exchange" [(ngModel)]="stock.exchange">
+    <option *ngFor="let ex of exchanges" [value]="ex">
+      {{ ex }}
+    </option>
+  </select>
+
+  <br>
+  <label>
+    <input type="checkbox" name="confirm" [(ngModel)]="isConfirmed" />
+I confirm that the information provided above is accurate!
+  </label>
+
+<br>
+
+  <button type="button" (click)="createStock()" [disabled]="stockForm.invalid || !isConfirmed">
+    Create
+  </button>
+
+<hr>
+
+
+<h3>
+  Stock Name is {{ stock | json }}
+</h3>
+
+
+<h3>
+  Data has been confirmed: {{ isConfirmed }}
+</h3>
+
